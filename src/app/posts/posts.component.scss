@@ -1,6 +1,15 @@
 app-post{
-    display: inline-block;
-    margin-left: 1rem;
+     display: inline-block;
     margin-bottom: 1rem;
-    vertical-align:top;
+}
+
+.content{
+    direction: rtl;
+    justify-content: center;
+}
+
+.column{
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
 }

@@ -1,5 +1,24 @@
-<div class="content">
-    @for (post of posts(); track post.id) {
+<div class="content flex">
+    <div class="column">
+        @for (post of getPosts1(); track post.id) {
         <app-post [post]="post"></app-post>
         }
+
+    </div>
+    <div class="column">
+        @for (post of getPosts2(); track post.id) {
+        <app-post [post]="post"></app-post>
+        }
+    </div>
+    <div class="column">
+        @for (post of getPosts3(); track post.id) {
+        <app-post [post]="post"></app-post>
+        }
+    </div>
+    <div class="column">
+
+        @for (post of getPosts4(); track post.id) {
+        <app-post [post]="post"></app-post>
+        }
+    </div>
 </div>

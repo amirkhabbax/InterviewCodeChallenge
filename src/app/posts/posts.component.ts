@@ -14,7 +14,7 @@ import { PostComponent } from "./post/post.component";
 export class PostsComponent extends UnsubscriptionService implements OnInit {
   private _getInfoService = inject(GetInfoService);
   posts = signal<Post[]>([]);
-
+  length = 0;
   constructor() {
     super();
   }
@@ -22,6 +22,22 @@ export class PostsComponent extends UnsubscriptionService implements OnInit {
   ngOnInit(): void {
     this._getInfoService.getPosts().pipe(takeUntil(this.UnSubscribe$)).subscribe((response) => {
       this.posts.set(response);
+      this.length = Math.floor(this.posts().length / 4);
     });
+  }
+  getPosts1(){
+    return this.posts().slice(0, this.length -1);
+  }
+
+  getPosts2(){
+    return this.posts().slice(this.length , 2* this.length -1 );
+  }
+
+  getPosts3(){
+    return this.posts().slice(2* this.length, 3* this.length -1);
+  }
+
+  getPosts4(){
+    return this.posts().slice(3* this.length, 4* this.length -1);
   }
 }
