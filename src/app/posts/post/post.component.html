@@ -1,0 +1,15 @@
+<div class="Post column-flex">
+    <div class="image">
+        <img [src]="post()?.img" [alt]="post()?.title">
+    </div>
+    <div class="Title">
+        <h3>{{post()?.title}}</h3>
+    </div>
+    <div class="abstract">
+        <p>{{post()?.abstract}}</p>
+    </div>
+    <div class="date">
+        <!-- <p>{{post()?.date | persianDate}}</p> -->
+        <p>{{post()?.date}}</p>
+    </div>
+</div>
