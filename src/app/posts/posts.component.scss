@@ -6,6 +6,8 @@ app-post{
 .content{
     direction: rtl;
     justify-content: center;
+    columns: 4;
+    -webkit-columns: 4;
 }
 
 .column{
