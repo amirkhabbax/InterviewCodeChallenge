@@ -15,11 +15,27 @@ export class AppComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    console.log(this._GoogleAdsFeeService.calculateFeeRate(50000000));
-    console.log(this._GoogleAdsFeeService.calculateFeeRate(51000000));
-    console.log(this._GoogleAdsFeeService.calculateFeeRate(90000000));
-    console.log(this._GoogleAdsFeeService.calculateFeeRate(91000000));
-    console.log(this._GoogleAdsFeeService.calculateFeeRate(120000000));
-    console.log(this._GoogleAdsFeeService.calculateFeeRate(121000000));
+
+    this._GoogleAdsFeeService.calculateFeeRate(50000000).then((res) => {
+      console.log(res)
+    });
+    this._GoogleAdsFeeService.calculateFeeRate(51000000).then((res) => {
+      console.log(res)
+    });
+    this._GoogleAdsFeeService.calculateFeeRate(90000000).then((res) => {
+      console.log(res)
+    });
+    this._GoogleAdsFeeService.calculateFeeRate(91000000).then((res) => {
+      console.log(res)
+    });
+    this._GoogleAdsFeeService.calculateFeeRate(120000000).then((res) => {
+      console.log(res)
+    });
+    this._GoogleAdsFeeService.calculateFeeRate(121000000).then((res) => {
+      console.log(res)
+    });
+    this._GoogleAdsFeeService.calculateFeeRate(80000000).then((res) => {
+      console.log(res)
+    });
   }
 }
